@@ -1,3 +1,69 @@
 {
-    arrayify: x => typeof(x)== 'array' ? x : [x]
-}
+  "CompareCaseInsensitive" :       false
+, "defaultDataType" :              "varchar"
+, "supportedLoadMethods" :         [ "reload", "upsert", "scd2" ]
+, "mapDatatypes" : {
+/* Primitives */
+    "base64" :                     "varchar"
+  , "boolean" :                    "boolean"
+  , "byte" :                       "number"
+  , "date" :                       "date"
+  , "datetime" :                   "timestamp_ntz"
+  , "double" :                     "number"
+  , "int" :                        "number"
+  , "long" :                       "number"
+  , "string" :                     "varchar"
+  , "time" :                       "time"
+  , "sl_timestamp" :               "timestamp_tz"
+/* Field Types */
+  , "address" :                    "object"
+  , "anyType" :                    "varchar"
+  , "calculated" :                 "varchar"
+  , "combobox" :                   "varchar"
+  , "currency" :                   "number"
+  , "datacategorygroupreference" : "varchar"
+  , "double" :                     "number"
+  , "email" :                      "varchar"
+  , "encryptedstring" :            "varchar"
+  , "id" :                         "varchar"
+  , "junctionidlist" :             "varchar"
+  , "location" :                   "varchar"
+  , "masterrecord" :               "varchar"
+  , "multipicklist" :              "varchar"
+  , "percent" :                    "number"
+  , "phone" :                      "varchar"
+  , "picklist" :                   "varchar"
+  , "reference" :                  "varchar"
+  , "textarea" :                   "varchar"
+  , "url" :                        "varchar"
+/* Custom Types */
+  , "complexvalue" :               "variant"
+  , "json" :                       "variant"
+  }
+, "selectAs" : {}
+, "mapValues" : {
+    "date" :                       "date"
+  , "datetime" :                   "date"
+  , "time" :                       "time"
+  , "sl_timestamp" :               "sl_timestamp"
+  , "address" :                    "json"
+  , "anyType" :                    "to_varchar"
+  , "calculated" :                 "to_varchar"
+  , "combobox" :                   "to_varchar"
+  , "complexvalue" :               "to_varchar"
+  , "datacategorygroupreference" : "to_varchar"
+  , "location" :                   "to_varchar"
+  , "json" :                       "json"
+  }
+, mapData : (value, type) => 
+	match type {
+       value @ null => value
+	 , value @ 'date' => value.replace(/T/,' ') 
+	 , value @ 'time' => value.replace(/Z/i,'') 
+	 , value @ 'json' => JSON.stringify(value) 
+	 , value @ 'to_varchar' => value.toString()
+	 , value @ 'sl_timestamp' => value.toLocaleDateTimeString().replace(/T/,' ') 
+	 , value @ 'base64_to_hex' => Base64.decodeAsBinary(value).toString(16) 
+	 , _ => value
+	}
+} 
