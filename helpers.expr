@@ -1,0 +1,3 @@
+{
+    arrayify: x => typeof(x)== 'array' ? x : [x]
+}

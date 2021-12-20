@@ -1,0 +1,43 @@
+{
+    "class_id": "com-snaplogic-snaps-salesforce-salesforceaccount",
+    "class_version": 1,
+    "migration_metadata": {
+        "source_org": "ConnectFasterInc"
+    },
+    "property_map": {
+        "info": {
+            "label": {
+                "value": "pm_snaplogic_fulltest"
+            },
+            "notes": {
+                "value": null
+            }
+        },
+        "settings": {
+            "loginUrl": {
+                "value": "https://snaplogic--fulltest.my.salesforce.com"
+            },
+            "password": {
+                "fp": "f7c9bca3cdb1d909994d00c87d300e1b5c16ef6881068c031269b72e8ba6d463",
+                "key": "account-cloud-managed-5592aed995315c0d2e1aaeeb-2015-06-30T14:59:59-654446",
+                "sym_iv": "cAbbNqZqNInt0m3vqR3tCA==",
+                "sym_key": "qdQLcs2b/seynuWbQcOFhNO7HWF7Pgk2YEpFfFf5Xs29WDDMZlunK2NEsOx4st/HF1ycQJaj3TZq7VogqaGpo93Gjap7X2x8DEIqJYecvmFv331CiHnvchX+NsD/HGql0gKLNFuVucsa2quF1+ifDw9iEodG105UjoHJtiq6GkwH7BGnBUoHx+PtlXL8XHHJuzmtb8PKP6q4kGKGuUC6ZxQxBTfk2kuFrt5MzF/GNSHZ9LEpmYzEzCgB8yNyXtjHLiQMnJ+C32fI1DZJk9g+8J5P0+L/iyx8rxxhAgR3ifqfd3q4K5sOQPmzOq7z81nCjqB1n2PiQLhyrGoaaxq3/A==",
+                "value": "O8Y11hQAG+K8L3SEMe7hzw=="
+            },
+            "sandbox": {
+                "value": false
+            },
+            "securityToken": {
+                "fp": "f7c9bca3cdb1d909994d00c87d300e1b5c16ef6881068c031269b72e8ba6d463",
+                "key": "account-cloud-managed-5592aed995315c0d2e1aaeeb-2015-06-30T14:59:59-654446",
+                "sym_iv": "r5TgWfaDExnn6lGIP2wGcw==",
+                "sym_key": "cMnTmNhhWcsifXE6qR0UiMdxG/lWZoXXSLA1YIyaNqsnImeAShFiNm8Y7KYRUMCdlBmeskCks3xg3VrYGcDMvsTxAZGBHJkzNb7LUW4hONreWW/VgnFkGO4PENUUvrPjBoxxesC/lQU93P0GKNbYpfgJb1zbcJXo7LhaLkuEUddrkt+xD+KKO9q6rS2pXj5ff4hIgfTOQ7ISKpRsl6a17UWMdxLHu1F/f83lJagLXBikBJaBmFhucOdjWmgUVbvfSfDlRjlzRtr3MYSalXeIZjO66SdHTJOgEAy9uoBHyzuELXhT/qfbqK+XUeGuAlOwIF/fuT42i4B8oCR+mnMUcA==",
+                "value": "Nicg2eEwSfdHZrITVXqPnkiCFGhOmjaq9EHP3/E88es="
+            },
+            "username": {
+                "value": "product@snaplogic.com.fulltest"
+            }
+        },
+        "view_serial": 100
+    }
+}
